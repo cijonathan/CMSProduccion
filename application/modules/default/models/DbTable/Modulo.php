@@ -647,6 +647,6 @@ class Default_Model_DbTable_Modulo extends Zend_Db_Table_Abstract
                     }
             return $consulta->query()->rowCount();
         }        
-    }	
+    }
 }
 
