@@ -1,0 +1,76 @@
+<?php echo $this->action('top', 'modulo', 'default'); ?>
+<ul class="breadcrumb">
+    <li><a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'tablero', 'action' => 'index'), '', true); ?>">Tablero</a> <span class="divider">/</span></li>
+    <li><a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'modulo', 'action' => 'index','id'=>$this->id_modulo), '', true); ?>">Modulo: <strong><?php echo $this->dato->nombre_modulo;?></strong></a></li>
+	<li><span class="divider">/</span> Redimensionar imagen</li>
+</ul>
+<h2>Modulo: <?php echo $this->dato->nombre_modulo;?><br /><small>Redimensionar imagen</small></h2><br /> 
+
+<div id="mensaje"><?php echo $this->mensaje; ?></div>
+
+<blockquote>
+  <small style="color:#666;"><br />El tamaño mínimo es de 320x240 pixeles.</small>
+</blockquote>
+
+<form id="form-recorte" action="#" method="POST">
+	<fieldset>
+		<legend>Seleccionar nuevas dimensiones</legend>
+		<div class="thumbnail">
+			<img src="<?php echo $this->imagen; ?>" alt="" />
+		</div>
+		<div class="form-actions">
+			<input type="hidden" id="id" name="id" value="<?php echo $this->id_imagen; ?>" />
+			<input type="hidden" id="modulo" name="modulo" value="<?php echo $this->id_modulo; ?>" />
+			<input type="hidden" id="imagen" name="imagen" value="<?php echo $this->imagen; ?>" />
+			<input type="hidden" id="x" name="x" />
+			<input type="hidden" id="y" name="y" />
+			<input type="hidden" id="w" name="w" />
+			<input type="hidden" id="h" name="h" />
+			<button type="submit" class="btn btn-large btn-primary">Guardar</button>
+		</div>
+	</fieldset>
+</form>
+
+
+
+<script type="text/javascript">
+$(function($){
+	// Seleccionar area
+	$('#form-recorte img').Jcrop({
+		allowSelect		: false,
+		aspectRatio		: 320/240,
+		// allowResize		: false,
+		bgColor			: 'black',
+		bgOpacity		: .5,
+		minSize			: [ 320, 240 ],
+		onSelect		: showCoords,
+		setSelect		: [ 0, 0, 320, 240 ]
+	});
+	
+	// Enviar recorte
+	$("#form-recorte").submit(function(){ 
+		$.ajax({
+			type: "POST",
+			url: "/modulo/procesar-recorte-imagen/",
+			data: $("#form-recorte").serialize(),
+			dataType: "json",
+		}).done(function(json){
+			if(json.result)
+				window.location.href = "/modulo/galeria-fotografica/id/<?php echo $this->id_modulo; ?>/<?php echo $this->id_registro; ?>";
+			else{
+				$("#mensaje").hide().empty().append(json.msg).fadeIn("slow");
+				$(".brand").focus();
+			}
+		});
+
+		return false;
+	});
+});
+function showCoords(c){
+	$('#x').val(c.x);
+	$('#y').val(c.y);
+	$('#w').val(c.w);
+	$('#h').val(c.h);
+	return false;
+};
+</script>

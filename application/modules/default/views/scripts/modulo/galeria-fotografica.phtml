@@ -1,0 +1,95 @@
+<?php echo $this->action('top', 'modulo', 'default'); ?>
+<ul class="breadcrumb">
+    <li><a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'tablero', 'action' => 'index'), '', true); ?>">Tablero</a> <span class="divider">/</span></li>
+    <li><a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'modulo', 'action' => 'index','id'=>$this->id_modulo), '', true); ?>">Modulo: <strong><?php echo $this->dato->nombre_modulo;?></strong></a></li>  
+    <li><span class="divider">/</span><a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'modulo', 'action' => 'editar','id'=>$this->id_modulo,'idregistro'=>$this->id_registro), '', true); ?>"><?php echo $this->datosformulario->nombre;?></a></li>
+    <li><span class="divider">/</span> <strong>Galería fotográfica</strong></li>
+</ul>
+<h2>Modulo: <?php echo $this->dato->nombre_modulo;?><br /><small>Galería fotográfica</small></h2><br /> 
+
+<div id="mensaje"><?php echo $this->mensaje; ?></div>
+
+<div class="well btn-primary">
+        Puedes mover las imagenes para cambiar el orden en que aparecerán en tu sitio.<br />
+        También puedes agregar una descripción a cada imagen.
+</div>
+
+<?php if(count($this->imagenes)){ ?> 
+<ul id="imagenes" class="thumbnails">
+<?php foreach($this->imagenes as $imagen){ ?> 
+  <li id="orden-<?php echo $imagen->id; ?>">
+	<div class="imagen">
+		<a href="<?php echo $imagen->ruta_grande; ?>" class="thumbnail zgallery">
+		  <img src="<?php echo $imagen->ruta_chica; ?>" alt="<?php echo $imagen->descripcion; ?>" width="100" height="75">
+		</a>
+	</div>
+	<div class="comentario">
+		<textarea id="comentario-<?php echo $imagen->id; ?>" cols="10" rows="5"><?php echo $imagen->descripcion; ?></textarea>
+		<button class="img-comentar btn btn-mini btn-primary" title="Guardar cambios" value="<?php echo $imagen->id; ?>"><i class="icon-white icon-download-alt"></i></button> 
+		<?php /*<a href="/modulo/redimensionar-imagen/id/<?php echo $this->id_modulo; ?>/registro/<?php echo $this->id_registro; ?>/imagen/<?php echo $imagen->id; ?>" class="btn btn-mini" title="Redimensionar" value="<?php echo $imagen->id; ?>"><i class="icon-resize-full"></i></a> */?>
+		<button class="img-principal btn btn-mini <?php echo ($imagen->tipo)?'btn-success':""; ?>" title="<?php echo ($imagen->tipo)?"Imagen principal":"Marcar como principal"; ?>" value="<?php echo $imagen->id; ?>"><i class="<?php echo ($imagen->tipo)?'icon-white':""; ?> icon-star"></i></button> 
+		<button class="img-borrar btn btn-mini" title="eliminar" value="<?php echo $imagen->id; ?>"><i class="icon-remove"></i></button> 
+	</div>
+  </li>
+<?php } ?> 
+</ul>
+<?php } ?> 
+
+<form id="form-imagenes" action="#" method="POST">
+	<input type="hidden" id="codigo_modulo" value="<?php echo $this->id_modulo; ?>" />
+	<input type="hidden" id="codigo_registro" value="<?php echo $this->id_registro; ?>" />
+	<div id="uploader">
+		<p>Tu navegador no puede desplegar el recuadro de subida de archivos porque no tiene soporte para los formatos Flash, Silverlight, Gears, BrowserPlus y HTML5.</p>
+	</div>
+	<button type="submit" id="submit" class="btn" style="margin:15px 16px 0">Subir imagenes</button>
+</form>
+
+<script type="text/javascript">
+$(function($){
+	// ZOOM IMAGENES
+    $('a.thumbnail').zoombox();
+	
+	// REORDENAR GALERIA
+    $("#imagenes").sortable({placeholder: 'ui-state-highlight', opacity: 0.8, cursor: 'move', update: function(){
+        var order = $(this).sortable("serialize"); 		
+		$.post("/modulo/reordenar-galeria/", {order: order, registro: <?php echo $this->id_registro; ?>, modulo: <?php echo $this->id_modulo; ?>}, function(){
+			$("#mensaje").hide().empty().append('<div class="alert alert-success"><h4 class="alert-heading">!Correcto!</h4>La galería ha sido reordenada exitosamente.</div>').fadeIn("slow");
+		});
+        }
+    });
+	
+	// BOTONES
+	// Guardar comentario
+	$(".img-comentar").click(function(){
+		$.getJSON("/modulo/guardar-comentario-galeria/",{ comentario: $("#comentario-"+$(this).val()).val(), imagen: $(this).val(), modulo: <?php echo $this->id_modulo; ?> },
+			function(json){
+				$("#mensaje").hide().empty().append(json.msg).fadeIn("slow");
+			}
+		);
+	});
+	// Borrar imagen
+	$(".img-borrar").click(function(){
+		var aux = $(this).parent().parent();
+		$.getJSON("/modulo/eliminar-imagen-galeria/",{ imagen: $(this).val(), modulo: <?php echo $this->id_modulo; ?> },
+			function(json){
+				$("#mensaje").hide().empty().append(json.msg).fadeIn("slow");
+				if(json.result)
+					aux.remove();
+			}
+		);
+	});
+	// Cambiar imagen principal
+	$(".img-principal").click(function(){
+		var aux = $(this);
+		$.getJSON("/modulo/marcar-imagen-principal/",{ imagen: $(this).val(), modulo: <?php echo $this->id_modulo; ?>, registro: <?php echo $this->id_registro; ?> },
+			function(json){
+				if(json.result){
+					$(".img-principal").removeClass("btn-success").find("i").removeClass("icon-white");
+					aux.addClass("btn-success").find("i").addClass("icon-white");
+				}
+				$("#mensaje").hide().empty().append(json.msg).fadeIn("slow");
+			}
+		);
+	});
+});
+</script>

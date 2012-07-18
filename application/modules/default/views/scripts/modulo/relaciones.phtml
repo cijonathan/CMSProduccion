@@ -1,0 +1,67 @@
+<?php echo $this->action('top', 'modulo', 'default'); ?>
+<ul class="breadcrumb">
+    <li><a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'tablero', 'action' => 'index'), '', true); ?>">Tablero</a> <span class="divider">/</span></li>
+    <li><a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'modulo', 'action' => 'index','id'=>$this->id_modulo), '', true); ?>">Modulo: <strong><?php echo $this->dato->nombre_modulo;?></strong></a></li>
+    <li><span class="divider">/</span><a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'modulo', 'action' => 'editar','id'=>$this->id_modulo,'idregistro'=>$this->id_registro), '', true); ?>"><?php echo $this->datosformulario->nombre;?></a></li>
+    <li><span class="divider">/</span> <strong>Relaciones</strong></li>
+</ul>
+<h2>Modulo: <?php echo $this->dato->nombre_modulo;?><br /><small>Relaciones</small></h2><br /> 
+
+<div id="mensaje"><?php echo $this->mensaje; ?></div>
+
+<div class="row">
+	<div class="span4">
+		<div class="well">
+			<h4>Modulos relacionados</h4>
+			<?php echo $this->formulario_relaciones; ?>
+		</div>
+	</div>
+	<div class="span7">
+		<?php if ($this->error) : ?>
+			<div class="alert alert-error">
+				<a class="close" data-dismiss="alert" href="#">&times;</a>
+				<h2>¡ERROR!</h2> No fue posible ejecutar esta acción, intenta nuevamente.
+			</div>   
+		<?php elseif ($this->exito) : ?>   
+			<div class="alert alert-success">
+				<a class="close" data-dismiss="alert" href="#">&times;</a>
+				<h2>¡EXITO!</h2> Se ejecuto exitosamente esta acción.
+			</div>        
+		<?php endif; ?>     
+		<table class="table table-striped table-bordered table-condensed">
+			<thead>
+				<tr>
+					<th>Nombre modulo</th>
+					<th width="10">Acciones</th>            
+				</tr>
+			</thead>
+			<tbody>
+				<?php if(count($this->datos)){ ?>
+				<?php foreach ($this->datos as $retorno){ ?>
+					<tr>
+						<td><?php echo $retorno->nombre; ?></td>
+						<td>
+							<button class="btn btn-danger eliminar-relacion" value="<?php echo $retorno->id; ?>"><i class="icon-white icon-trash"></i></button>
+						</td>
+					</tr>
+				<?php }}else{ ?>
+				<tr><td colspan="2">No hay modulos relacionados.</td></tr>
+				<?php } ?>
+			</tbody>
+		</table>    
+	</div>
+</div>
+<?php if(count($this->datos)){ ?>
+<script type="text/javascript">
+$(function(){
+	$(".eliminar-relacion").click(function(){
+		// Borrar imagen
+		$.getJSON("/modulo/eliminar-relacion/",{ registro_hijo: $(this).val(), modulo_padre: <?php echo $this->datos[0]->id_padre; ?>, modulo_hijo: <?php echo $this->datos[0]->id_hijo; ?>, cardinalidad: <?php echo $this->datos[0]->id_cardinalidad;?> },
+			function(json){
+				window.location.reload();
+			}
+		);
+	});
+});
+</script>
+<?php } ?>

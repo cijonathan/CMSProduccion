@@ -1,0 +1,42 @@
+<!-- [TOP] -->
+<div class="row abajo">
+    <div class="span4">
+        <img alt="" src="http://placehold.it/200x50">
+    </div>
+    <div class="span8">
+        <div class="row pull-right">
+            ¡ Bienvenido ! <strong><?php echo $this->nombre_usuario;?></strong><br />
+            <i class="icon-user"></i> <a href="<?php echo $this->url(array('module'=>'default','controller'=>'perfil','action'=>'index'),'',true);?>">Mi perfil</a> | 
+            <i class="icon-off"></i> <a href="<?php echo $this->url(array('module'=>'default','controller'=>'tablero','action'=>'cerrar'),'',true);?>">Cerrar sesión</a>
+        </div>
+    </div>
+</div> 
+<!-- [MENU] -->
+<div class="navbar abajo">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="<?php echo $this->url(array('module'=>'default','controller'=>'tablero','action'=>'index'),'',true);?>"><?php echo $this->nombre_empresa;?></a>            
+            <ul class="nav">
+                <li class="divider-vertical"></li>                         
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Modulos<b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-header">Listado</li>     
+                        <?php foreach($this->modulo as $retorno) :?>
+                            <li><a href="<?php echo $this->url(array('module'=>'default','controller'=>'modulo','action'=>'index','id'=>$retorno->id_modulo),'',true);?>"><i class="icon-list-alt"></i> <?php echo $retorno->nombre_modulo;?></a></li>                            
+                        <?php endforeach;?>                        
+                    </ul> 
+                </li>                
+                <li class="divider-vertical"></li>                         
+                <li><a href="<?php echo $this->url(array('module'=>'default','controller'=>'usuario','action'=>'index'),'',true);?>">Usuarios</a></li>
+            </ul>
+            <ul class="nav pull-right">
+                <li class="divider-vertical"></li>                         
+                <li><a href="<?php echo $this->url(array('module'=>'default','controller'=>'ayuda','action'=>'index'),'',true);?>">Ayuda</a></li>                
+                <li class="divider-vertical"></li>                         
+            </ul>
+        </div>
+    </div>            
+</div>

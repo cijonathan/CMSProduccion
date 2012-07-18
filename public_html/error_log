@@ -1,0 +1,705 @@
+[09-Jul-2012 17:15:22] PHP Fatal error:  Uncaught exception 'Zend_Controller_Response_Exception' with message 'Cannot send headers; headers already sent in /home/cmshostp/application/modules/default/plugins/Acceso.php, line 21' in /home/cmshostp/library/Zend/Controller/Response/Abstract.php:323
+Stack trace:
+#0 /home/cmshostp/library/Zend/Controller/Response/Abstract.php(341): Zend_Controller_Response_Abstract->canSendHeaders(true)
+#1 /home/cmshostp/library/Zend/Controller/Response/Abstract.php(768): Zend_Controller_Response_Abstract->sendHeaders()
+#2 /home/cmshostp/library/Zend/Controller/Front.php(992): Zend_Controller_Response_Abstract->sendResponse()
+#3 /home/cmshostp/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#4 /home/cmshostp/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#5 /home/cmshostp/public_html/index.php(26): Zend_Application->run()
+#6 {main}
+  thrown in /home/cmshostp/library/Zend/Controller/Response/Abstract.php on line 323
+[09-Jul-2012 17:20:27] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[09-Jul-2012 17:20:27] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[09-Jul-2012 17:20:27] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[09-Jul-2012 17:20:31] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[09-Jul-2012 17:36:01] PHP Fatal error:  Uncaught exception 'Zend_Controller_Response_Exception' with message 'Cannot send headers; headers already sent in /home/cmshostp/application/modules/default/plugins/Acceso.php, line 21' in /home/cmshostp/library/Zend/Controller/Response/Abstract.php:323
+Stack trace:
+#0 /home/cmshostp/library/Zend/Controller/Response/Abstract.php(341): Zend_Controller_Response_Abstract->canSendHeaders(true)
+#1 /home/cmshostp/library/Zend/Controller/Response/Abstract.php(768): Zend_Controller_Response_Abstract->sendHeaders()
+#2 /home/cmshostp/library/Zend/Controller/Front.php(992): Zend_Controller_Response_Abstract->sendResponse()
+#3 /home/cmshostp/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#4 /home/cmshostp/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#5 /home/cmshostp/public_html/index.php(26): Zend_Application->run()
+#6 {main}
+  thrown in /home/cmshostp/library/Zend/Controller/Response/Abstract.php on line 323
+[09-Jul-2012 17:50:38] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[09-Jul-2012 17:50:50] PHP Fatal error:  Uncaught exception 'Zend_Controller_Response_Exception' with message 'Cannot send headers; headers already sent in /home/cmshostp/application/modules/default/plugins/Acceso.php, line 21' in /home/cmshostp/library/Zend/Controller/Response/Abstract.php:323
+Stack trace:
+#0 /home/cmshostp/library/Zend/Controller/Response/Abstract.php(341): Zend_Controller_Response_Abstract->canSendHeaders(true)
+#1 /home/cmshostp/library/Zend/Controller/Response/Abstract.php(768): Zend_Controller_Response_Abstract->sendHeaders()
+#2 /home/cmshostp/library/Zend/Controller/Front.php(992): Zend_Controller_Response_Abstract->sendResponse()
+#3 /home/cmshostp/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#4 /home/cmshostp/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#5 /home/cmshostp/public_html/index.php(26): Zend_Application->run()
+#6 {main}
+  thrown in /home/cmshostp/library/Zend/Controller/Response/Abstract.php on line 323
+[09-Jul-2012 17:50:52] PHP Fatal error:  Uncaught exception 'Zend_Controller_Response_Exception' with message 'Cannot send headers; headers already sent in /home/cmshostp/application/modules/default/plugins/Acceso.php, line 21' in /home/cmshostp/library/Zend/Controller/Response/Abstract.php:323
+Stack trace:
+#0 /home/cmshostp/library/Zend/Controller/Response/Abstract.php(341): Zend_Controller_Response_Abstract->canSendHeaders(true)
+#1 /home/cmshostp/library/Zend/Controller/Response/Abstract.php(768): Zend_Controller_Response_Abstract->sendHeaders()
+#2 /home/cmshostp/library/Zend/Controller/Front.php(992): Zend_Controller_Response_Abstract->sendResponse()
+#3 /home/cmshostp/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#4 /home/cmshostp/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#5 /home/cmshostp/public_html/index.php(26): Zend_Application->run()
+#6 {main}
+  thrown in /home/cmshostp/library/Zend/Controller/Response/Abstract.php on line 323
+[09-Jul-2012 17:51:01] PHP Fatal error:  Uncaught exception 'Zend_Controller_Response_Exception' with message 'Cannot send headers; headers already sent in /home/cmshostp/application/modules/default/plugins/Acceso.php, line 21' in /home/cmshostp/library/Zend/Controller/Response/Abstract.php:323
+Stack trace:
+#0 /home/cmshostp/library/Zend/Controller/Response/Abstract.php(341): Zend_Controller_Response_Abstract->canSendHeaders(true)
+#1 /home/cmshostp/library/Zend/Controller/Response/Abstract.php(768): Zend_Controller_Response_Abstract->sendHeaders()
+#2 /home/cmshostp/library/Zend/Controller/Front.php(992): Zend_Controller_Response_Abstract->sendResponse()
+#3 /home/cmshostp/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#4 /home/cmshostp/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#5 /home/cmshostp/public_html/index.php(26): Zend_Application->run()
+#6 {main}
+  thrown in /home/cmshostp/library/Zend/Controller/Response/Abstract.php on line 323
+[09-Jul-2012 17:52:41] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[09-Jul-2012 17:52:41] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[09-Jul-2012 17:52:42] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[09-Jul-2012 17:59:03] PHP Fatal error:  Uncaught exception 'Zend_Controller_Response_Exception' with message 'Cannot send headers; headers already sent in /home/cmshostp/application/modules/default/plugins/Acceso.php, line 21' in /home/cmshostp/library/Zend/Controller/Response/Abstract.php:323
+Stack trace:
+#0 /home/cmshostp/library/Zend/Controller/Response/Abstract.php(341): Zend_Controller_Response_Abstract->canSendHeaders(true)
+#1 /home/cmshostp/library/Zend/Controller/Response/Abstract.php(768): Zend_Controller_Response_Abstract->sendHeaders()
+#2 /home/cmshostp/library/Zend/Controller/Front.php(992): Zend_Controller_Response_Abstract->sendResponse()
+#3 /home/cmshostp/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#4 /home/cmshostp/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#5 /home/cmshostp/public_html/index.php(26): Zend_Application->run()
+#6 {main}
+  thrown in /home/cmshostp/library/Zend/Controller/Response/Abstract.php on line 323
+[09-Jul-2012 18:25:20] PHP Warning:  ftp_mkdir() [<a href='function.ftp-mkdir'>function.ftp-mkdir</a>]: Can't create directory: No such file or directory in /home/cmshostp/application/modules/default/controllers/ModuloController.php on line 243
+[09-Jul-2012 18:26:28] PHP Warning:  ftp_mkdir() [<a href='function.ftp-mkdir'>function.ftp-mkdir</a>]: Can't create directory: No such file or directory in /home/cmshostp/application/modules/default/controllers/ModuloController.php on line 243
+[09-Jul-2012 18:27:07] PHP Parse error:  syntax error, unexpected T_STRING in /home/cmshostp/application/modules/default/controllers/ModuloController.php on line 246
+[09-Jul-2012 18:29:39] PHP Warning:  ftp_mkdir() [<a href='function.ftp-mkdir'>function.ftp-mkdir</a>]: Can't create directory: No such file or directory in /home/cmshostp/application/modules/default/controllers/ModuloController.php on line 243
+[09-Jul-2012 18:42:03] PHP Fatal error:  Uncaught exception 'Zend_Controller_Response_Exception' with message 'Cannot send headers; headers already sent in /home/cmshostp/application/modules/default/plugins/Acceso.php, line 21' in /home/cmshostp/library/Zend/Controller/Response/Abstract.php:323
+Stack trace:
+#0 /home/cmshostp/library/Zend/Controller/Response/Abstract.php(341): Zend_Controller_Response_Abstract->canSendHeaders(true)
+#1 /home/cmshostp/library/Zend/Controller/Response/Abstract.php(768): Zend_Controller_Response_Abstract->sendHeaders()
+#2 /home/cmshostp/library/Zend/Controller/Front.php(992): Zend_Controller_Response_Abstract->sendResponse()
+#3 /home/cmshostp/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#4 /home/cmshostp/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#5 /home/cmshostp/public_html/index.php(26): Zend_Application->run()
+#6 {main}
+  thrown in /home/cmshostp/library/Zend/Controller/Response/Abstract.php on line 323
+[09-Jul-2012 18:43:32] PHP Fatal error:  Uncaught exception 'Zend_Controller_Response_Exception' with message 'Cannot send headers; headers already sent in /home/cmshostp/application/modules/default/plugins/Acceso.php, line 21' in /home/cmshostp/library/Zend/Controller/Response/Abstract.php:323
+Stack trace:
+#0 /home/cmshostp/library/Zend/Controller/Response/Abstract.php(341): Zend_Controller_Response_Abstract->canSendHeaders(true)
+#1 /home/cmshostp/library/Zend/Controller/Response/Abstract.php(768): Zend_Controller_Response_Abstract->sendHeaders()
+#2 /home/cmshostp/library/Zend/Controller/Front.php(992): Zend_Controller_Response_Abstract->sendResponse()
+#3 /home/cmshostp/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#4 /home/cmshostp/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#5 /home/cmshostp/public_html/index.php(26): Zend_Application->run()
+#6 {main}
+  thrown in /home/cmshostp/library/Zend/Controller/Response/Abstract.php on line 323
+[09-Jul-2012 18:43:52] PHP Fatal error:  Uncaught exception 'Zend_Controller_Response_Exception' with message 'Cannot send headers; headers already sent in /home/cmshostp/application/modules/default/plugins/Acceso.php, line 21' in /home/cmshostp/library/Zend/Controller/Response/Abstract.php:323
+Stack trace:
+#0 /home/cmshostp/library/Zend/Controller/Response/Abstract.php(341): Zend_Controller_Response_Abstract->canSendHeaders(true)
+#1 /home/cmshostp/library/Zend/Controller/Response/Abstract.php(768): Zend_Controller_Response_Abstract->sendHeaders()
+#2 /home/cmshostp/library/Zend/Controller/Front.php(992): Zend_Controller_Response_Abstract->sendResponse()
+#3 /home/cmshostp/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#4 /home/cmshostp/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#5 /home/cmshostp/public_html/index.php(26): Zend_Application->run()
+#6 {main}
+  thrown in /home/cmshostp/library/Zend/Controller/Response/Abstract.php on line 323
+[09-Jul-2012 18:47:34] PHP Fatal error:  Uncaught exception 'Zend_Controller_Response_Exception' with message 'Cannot send headers; headers already sent in /home/cmshostp/application/modules/default/plugins/Acceso.php, line 21' in /home/cmshostp/library/Zend/Controller/Response/Abstract.php:323
+Stack trace:
+#0 /home/cmshostp/library/Zend/Controller/Response/Abstract.php(341): Zend_Controller_Response_Abstract->canSendHeaders(true)
+#1 /home/cmshostp/library/Zend/Controller/Response/Abstract.php(768): Zend_Controller_Response_Abstract->sendHeaders()
+#2 /home/cmshostp/library/Zend/Controller/Front.php(992): Zend_Controller_Response_Abstract->sendResponse()
+#3 /home/cmshostp/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#4 /home/cmshostp/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#5 /home/cmshostp/public_html/index.php(26): Zend_Application->run()
+#6 {main}
+  thrown in /home/cmshostp/library/Zend/Controller/Response/Abstract.php on line 323
+[09-Jul-2012 18:49:17] PHP Fatal error:  Uncaught exception 'Zend_Controller_Response_Exception' with message 'Cannot send headers; headers already sent in /home/cmshostp/application/modules/default/plugins/Acceso.php, line 21' in /home/cmshostp/library/Zend/Controller/Response/Abstract.php:323
+Stack trace:
+#0 /home/cmshostp/library/Zend/Controller/Response/Abstract.php(341): Zend_Controller_Response_Abstract->canSendHeaders(true)
+#1 /home/cmshostp/library/Zend/Controller/Response/Abstract.php(768): Zend_Controller_Response_Abstract->sendHeaders()
+#2 /home/cmshostp/library/Zend/Controller/Front.php(992): Zend_Controller_Response_Abstract->sendResponse()
+#3 /home/cmshostp/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#4 /home/cmshostp/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#5 /home/cmshostp/public_html/index.php(26): Zend_Application->run()
+#6 {main}
+  thrown in /home/cmshostp/library/Zend/Controller/Response/Abstract.php on line 323
+[09-Jul-2012 18:52:29] PHP Fatal error:  Uncaught exception 'Zend_Controller_Response_Exception' with message 'Cannot send headers; headers already sent in /home/cmshostp/application/modules/default/plugins/Acceso.php, line 21' in /home/cmshostp/library/Zend/Controller/Response/Abstract.php:323
+Stack trace:
+#0 /home/cmshostp/library/Zend/Controller/Response/Abstract.php(341): Zend_Controller_Response_Abstract->canSendHeaders(true)
+#1 /home/cmshostp/library/Zend/Controller/Response/Abstract.php(768): Zend_Controller_Response_Abstract->sendHeaders()
+#2 /home/cmshostp/library/Zend/Controller/Front.php(992): Zend_Controller_Response_Abstract->sendResponse()
+#3 /home/cmshostp/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#4 /home/cmshostp/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#5 /home/cmshostp/public_html/index.php(26): Zend_Application->run()
+#6 {main}
+  thrown in /home/cmshostp/library/Zend/Controller/Response/Abstract.php on line 323
+[09-Jul-2012 18:56:08] PHP Fatal error:  Uncaught exception 'Zend_Controller_Response_Exception' with message 'Cannot send headers; headers already sent in /home/cmshostp/application/modules/default/plugins/Acceso.php, line 21' in /home/cmshostp/library/Zend/Controller/Response/Abstract.php:323
+Stack trace:
+#0 /home/cmshostp/library/Zend/Controller/Response/Abstract.php(341): Zend_Controller_Response_Abstract->canSendHeaders(true)
+#1 /home/cmshostp/library/Zend/Controller/Response/Abstract.php(768): Zend_Controller_Response_Abstract->sendHeaders()
+#2 /home/cmshostp/library/Zend/Controller/Front.php(992): Zend_Controller_Response_Abstract->sendResponse()
+#3 /home/cmshostp/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#4 /home/cmshostp/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#5 /home/cmshostp/public_html/index.php(26): Zend_Application->run()
+#6 {main}
+  thrown in /home/cmshostp/library/Zend/Controller/Response/Abstract.php on line 323
+[09-Jul-2012 20:26:38] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[09-Jul-2012 20:41:05] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[10-Jul-2012 09:23:31] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[10-Jul-2012 10:52:57] PHP Fatal error:  Call to a member function select() on a non-object in /home/cmshostp/application/modules/default/models/DbTable/Campo.php on line 142
+[10-Jul-2012 13:57:45] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[10-Jul-2012 13:57:48] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[10-Jul-2012 13:57:52] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[10-Jul-2012 15:31:52] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[10-Jul-2012 15:31:52] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[10-Jul-2012 15:31:52] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[10-Jul-2012 16:55:57] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[10-Jul-2012 16:55:57] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[10-Jul-2012 16:55:57] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[11-Jul-2012 10:22:06] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[11-Jul-2012 10:22:06] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[11-Jul-2012 10:22:06] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[11-Jul-2012 11:17:48] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[11-Jul-2012 11:17:48] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[11-Jul-2012 11:17:49] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[11-Jul-2012 11:17:49] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[11-Jul-2012 15:53:25] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[12-Jul-2012 09:35:47] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[12-Jul-2012 09:35:47] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[12-Jul-2012 09:35:47] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[12-Jul-2012 11:35:56] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[12-Jul-2012 11:35:57] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[12-Jul-2012 11:35:57] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[12-Jul-2012 16:11:43] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[12-Jul-2012 16:11:44] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[12-Jul-2012 16:11:44] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[12-Jul-2012 16:45:27] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[13-Jul-2012 09:20:10] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[13-Jul-2012 09:20:10] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[13-Jul-2012 09:20:10] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[13-Jul-2012 09:48:46] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[13-Jul-2012 09:48:46] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[13-Jul-2012 09:48:46] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[13-Jul-2012 10:45:39] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[13-Jul-2012 10:45:42] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[13-Jul-2012 18:10:33] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[13-Jul-2012 18:10:33] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[13-Jul-2012 18:10:33] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[17-Jul-2012 15:24:52] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[17-Jul-2012 16:08:26] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[17-Jul-2012 16:12:09] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[17-Jul-2012 16:15:27] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[17-Jul-2012 16:15:28] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[17-Jul-2012 16:15:28] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[17-Jul-2012 16:17:41] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336
+[18-Jul-2012 13:02:56] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'No entry is registered for key 'id_usuario'' in /home/cmshostp/library/Zend/Registry.php:147
+Stack trace:
+#0 /home/cmshostp/application/modules/default/controllers/LayoutController.php(20): Zend_Registry::get('id_usuario')
+#1 /home/cmshostp/library/Zend/Controller/Action.php(516): LayoutController->topAction()
+#2 /home/cmshostp/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('topAction')
+#3 /home/cmshostp/library/Zend/View/Helper/Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 /home/cmshostp/library/Zend/View/Abstract.php(350): Zend_View_Helper_Action->action('top', 'layout', 'default')
+#5 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View_Abstract->__call(Array, Array)
+#6 /home/cmshostp/application/layouts/scripts/layout.phtml(11): Zend_View->action('action', Array)
+#7 /home/cmshostp/library/Zend/View.php(10 in /home/cmshostp/library/Zend/Controller/Plugin/Broker.php on line 336

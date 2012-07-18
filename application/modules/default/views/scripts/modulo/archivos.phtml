@@ -1,0 +1,70 @@
+<?php echo $this->action('top', 'modulo', 'default'); ?>
+<ul class="breadcrumb">
+    <li><a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'tablero', 'action' => 'index'), '', true); ?>">Tablero</a> <span class="divider">/</span></li>
+    <li><a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'modulo', 'action' => 'index','id'=>$this->id_modulo), '', true); ?>">Modulo: <strong><?php echo $this->dato->nombre_modulo;?></strong></a></li>
+    <li><span class="divider">/</span><a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'modulo', 'action' => 'editar','id'=>$this->id_modulo,'idregistro'=>$this->id_registro), '', true); ?>"><?php echo $this->datosformulario->nombre;?></a></li>
+    <li><span class="divider">/</span> <strong>Archivos</strong></li>
+</ul>
+<h2>Modulo: <?php echo $this->dato->nombre_modulo;?><br /><small>Archivos</small></h2><br /> 
+
+<div id="mensaje"><?php echo $this->mensaje; ?></div>
+
+<div class="well btn-primary">
+    Puedes mover los archivos para cambiar el orden en que aparecerán en tu sitio.    
+</div>
+
+<?php if(count($this->archivos)){ ?> 
+<ul class="archivos archivos-header">
+  <li class="header">
+	<span class="icono">Tipo</span>
+	<span class="nombre">Nombre</span>
+	<span class="peso">Peso</span>
+	<span class="borrar"></span>
+  </li>
+</ul>
+<ul id="archivos" class="archivos">
+<?php foreach($this->archivos as $archivo){ ?> 
+  <li id="orden-<?php echo $archivo->id; ?>">
+	<span class="icono"><?php echo $archivo->formato; ?></span>
+	<span class="nombre"><a href="<?php echo $archivo->ruta_archivo; ?>"><?php echo $archivo->nombre; ?></a></span>
+	<span class="peso"><?php echo $archivo->peso; ?></span>
+	<span class="borrar"><button class="archivo-borrar btn btn-mini btn-danger" title="eliminar" value="<?php echo $archivo->id; ?>"><i class="icon-white icon-trash"></i></button> </span>
+  </li>
+<?php } ?> 
+</ul>
+<?php } ?> 
+
+<form id="form-imagenes" action="#" method="POST">
+	<input type="hidden" id="codigo_modulo" value="<?php echo $this->id_modulo; ?>" />
+	<input type="hidden" id="codigo_registro" value="<?php echo $this->id_registro; ?>" />
+	<div id="uploader">
+		<p>Tu navegador no puede desplegar el recuadro de subida de archivos porque no tiene soporte para los formatos Flash, Silverlight, Gears, BrowserPlus y HTML5.</p>
+	</div>
+	<button type="submit" id="submit" class="btn" style="margin:15px 16px 0">Subir archivos</button>
+</form>
+
+<script type="text/javascript">
+$(function($){
+	// REORDENAR ARCHIVOS
+    $("#archivos").sortable({placeholder: 'ui-state-highlight', opacity: 0.8, cursor: 'move', update: 
+		function(){
+			var order = $(this).sortable("serialize"); 		
+			$.post("/modulo/reordenar-archivos/", {order: order, registro: <?php echo $this->id_registro; ?>, modulo: <?php echo $this->id_modulo; ?>}, function(){
+				$("#mensaje").hide().empty().append('<div class="alert alert-success"><h2 class="alert-heading">¡EXITO!</h2>La galería ha sido reordenada exitosamente.</div>').fadeIn("slow");
+			});
+        }
+    });
+	
+	// Borrar archivo
+	$(".archivo-borrar").click(function(){
+		var aux = $(this).parent().parent();
+		$.getJSON("/modulo/eliminar-archivo/",{ archivo: $(this).val(), modulo: <?php echo $this->id_modulo; ?> },
+			function(json){
+				$("#mensaje").hide().empty().append(json.msg).fadeIn("slow");
+				if(json.result)
+					aux.remove();
+			}
+		);
+	});
+});
+</script>

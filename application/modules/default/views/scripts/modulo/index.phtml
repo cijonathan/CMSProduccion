@@ -1,0 +1,57 @@
+<?php echo $this->action('top', 'modulo', 'default'); ?>
+<ul class="breadcrumb">
+    <li><a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'tablero', 'action' => 'index'), '', true); ?>">Tablero</a> <span class="divider">/</span></li>
+    <li>Modulos <span class="divider">/</span></li>
+    <li class="active">Modulo: <strong><?php echo $this->dato->nombre_modulo;?></strong></li>
+</ul>
+<h2>Modulo: <?php echo $this->dato->nombre_modulo;?><br /><small>Listado de registros del modulo</small></h2><br />
+<a href="<?php echo $this->url(array('module'=>'default','controller'=>'modulo','action'=>'nuevo','id'=>$this->dato->id_modulo),'',true);?>" class="btn btn-success btn-small pull-right abajo-bottom"><i class="icon-plus icon-white"></i> <strong>NUEVO ITEM</strong></a><br />
+<div style="clear: both"></div>
+<?php if ($this->error) : ?>
+    <div class="alert alert-error">
+        <a class="close" data-dismiss="alert" href="#">&times;</a>
+        <h2>¡ERROR!</h2> No fue posible ejecutar esta acción, intenta nuevamente.
+    </div>   
+<?php elseif ($this->exito) : ?>   
+    <div class="alert alert-success">
+        <a class="close" data-dismiss="alert" href="#">&times;</a>
+        <h2>¡EXITO!</h2> Se ejecuto exitosamente esta acción.
+    </div>        
+<?php endif; ?>   
+<table class="table table-striped table-bordered table-condensed">
+    <thead>
+        <tr>
+            <?php foreach($this->campo as $retorno) :?>                
+            <th><?php echo $retorno->nombre_campo;?></th>
+            <?php endforeach;?>
+            <th class="acciones">Acciones</th>            
+        </tr>
+    </thead>
+    <tbody>       
+        <?php foreach($this->total as $dato) :?>
+            <tr>               
+                <?php foreach($this->campo as $retorno) :?>                 
+                    <td><?php echo $this->modulo->showdato($retorno->id_campo,$dato);?></td>
+                <?php endforeach;?>                
+            <td>
+                <div class="btn-group">
+                    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">Acciones <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="<?php echo $this->url(array('module'=>'default','controller'=>'modulo','action'=>'editar','id'=>$this->dato->id_modulo,'idregistro'=>$dato),'',true);?>"><i class="icon-pencil"></i> Editar</a></li>
+                        <?php if($this->fotos) :?>
+                            <li><a href="<?php echo $this->url(array('module'=>'default','controller'=>'modulo','action'=>'galeria-fotografica','id'=>$this->dato->id_modulo,'idregistro'=>$dato),'',true);?>"><i class="icon-camera"></i> Fotografías</a></li>
+                        <?php endif;?>
+                        <?php if($this->archivos) :?>
+                            <li><a href="<?php echo $this->url(array('module'=>'default','controller'=>'modulo','action'=>'archivos','id'=>$this->dato->id_modulo,'idregistro'=>$dato),'',true);?>"><i class="icon-file"></i> Archivos</a></li>
+                        <?php endif;?>
+                        <?php if($this->relaciones) :?>
+                            <li><a href="<?php echo $this->url(array('module'=>'default','controller'=>'modulo','action'=>'relaciones','id'=>$this->dato->id_modulo,'idregistro'=>$dato),'',true);?>"><i class="icon-refresh"></i> Relaciones</a></li>
+                        <?php endif;?>
+                        <li><a href="<?php echo $this->url(array('module'=>'default','controller'=>'modulo','action'=>'eliminar','id'=>$this->dato->id_modulo,'idregistro'=>$dato),'',true);?>"><i class="icon-trash"></i> Eliminar</a></li>
+                    </ul>
+                </div>                
+            </td>                
+            </tr>            
+        <?php endforeach;?>
+    </tbody>
+</table>

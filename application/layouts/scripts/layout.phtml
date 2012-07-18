@@ -1,0 +1,21 @@
+<?php echo $this->doctype();echo "\n"; ?>
+<html>
+<head>   
+<?php echo $this->headTitle();echo "\n"; ?>
+<?php echo $this->headMeta();echo "\n"; ?>
+<?php echo $this->headLink();echo "\n"; ?>
+<?php echo $this->headScript();echo "\n"; ?>  
+</head>
+<body>
+    <div class="container">
+        <?php echo $this->action('top','layout','default');?>       
+        <?php echo $this->layout()->content; ?>
+        <div style="clear: both"></div>
+        <div class="row-fluid footer">
+            <div class="pull-right creditos">
+                <strong>CMS</strong> 0.1 BETA - Desarrollo Área Digital - <a href="https://github.com/cijonathan/Cms/commits/master" target="_blank">Actualizaciones</a>
+            </div>
+        </div>      
+    </div>
+</body>
+</html>

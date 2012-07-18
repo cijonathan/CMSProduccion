@@ -1,0 +1,58 @@
+/*!
+ * Estilo 0.1
+ *
+ * Copyright 2012 Creatividad e Inteligencia
+ *
+ */
+ .abajo{
+     margin-top: 10px
+ }
+ .abajo-bottom{
+     margin-bottom: 10px     
+ }
+ #formulario-login,.zend_form{
+     margin-bottom: 0 !important;
+ }
+ .creditos{
+     text-align: right;
+     font-size: 11px !important;
+ }
+ .footer{
+    border-top: 1px solid #E5E5E5;
+    margin-top: 25px;
+    padding: 5px 0 0 0;     
+ }
+ input[type="checkbox"]{
+     float: left;
+     margin-right: 5px;
+ }
+ input.error,textarea.error,select.error{
+     border: 1px dashed #FF0000;
+ }
+ .acciones{
+     width: 85px;
+     text-align: center !important;
+ }
+ 
+ /*  */
+ #imagenes li{width:300px;}
+ #imagenes .ui-state-highlight{background:#fafafa;border:1px dashed #333;border-radius:4px;display:block;float:left;height:105px;margin-bottom:19px;padding:2px;width:291px;}
+ #imagenes .imagen{float:left;}
+ #imagenes .comentario{margin-left:120px;}
+ #imagenes .comentario textarea{color:#666;font-size:9px;height:75px;line-height:13px;resize:none;width:169px;}
+ #imagenes .comentario span{float:right;font-size:9px;}
+ 
+ .archivos{border:1px solid #ccc;border-bottom:none;border-radius:4px;list-style:none;margin:15px 8px;}
+ .archivos .ui-state-highlight{background:#efefef;border:1px dashed #333;display:block;height:20px;margin:0;padding:4px 10px 5px 10px;width:902px;}
+ .archivos li{border-bottom:1px solid #ccc;height:20px;overflow:auto;padding:5px 10px;width:902px;}
+ .archivos-header li{border-radius:4px !important;}
+ .archivos li.header,.archivos li.header:hover{background:#fff !important;}
+ .archivos li span{display:block;float:left;}
+ .archivos li .icono{width:5%;}
+ .archivos li .nombre{width:75%;}
+ .archivos li .peso{width:15%;}
+ .archivos li .borrar{width:5%;}
+ .archivos li:nth-child(odd){background-color:#F9F9F9;}
+ .archivos li:first-child{border-radius:4px 4px 0 0;}
+ .archivos li:last-child{border-radius:0 0 4px 4px;}
+ .archivos li:hover{background:#f0f0f0;}

@@ -1,0 +1,51 @@
+<?php echo $this->action('top', 'modulo', 'default'); ?>
+<ul class="breadcrumb">
+    <li><a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'tablero', 'action' => 'index'), '', true); ?>">Tablero</a> <span class="divider">/</span></li>
+    <li>Modulos <span class="divider">/</span></li>
+    <li><a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'modulo', 'action' => 'index','id'=>$this->id_modulo), '', true); ?>">Modulo: <strong><?php echo $this->dato->nombre_modulo;?></strong></a></li>
+    <li> <span class="divider">/</span> <?php echo $this->datosformulario->nombre;?></li>    
+</ul>
+<h2>Modulo: <?php echo $this->dato->nombre_modulo;?><br /><small>Editar el registro y sus características</small></h2><br /> 
+<?php if($this->fotos) :?>
+<a href="<?php echo $this->url(array('module'=>'default','controller'=>'modulo','action'=>'galeria-fotografica','id'=>$this->id_modulo,'idregistro'=>$this->id_registro),'',true);?>" class="btn btn-inverse"><i clasS="icon-camera icon-white"></i> Galeria de Fotos</a> 
+<?php endif;?>
+<?php if($this->archivos) :?>
+<a href="<?php echo $this->url(array('module'=>'default','controller'=>'modulo','action'=>'archivos','id'=>$this->id_modulo,'idregistro'=>$this->id_registro),'',true);?>" class="btn btn-inverse"><i clasS="icon-file icon-white"></i> Galeria de Archivos</a>
+<?php endif;?>
+<?php if($this->relaciones) :?>
+<a href="<?php echo $this->url(array('module'=>'default','controller'=>'modulo','action'=>'relaciones','id'=>$this->id_modulo,'idregistro'=>$this->id_registro),'',true);?>" class="btn btn-inverse"><i clasS="icon-refresh icon-white"></i> Relaciones</a>
+<?php endif;?>
+<div class="clearfix"></div><br />
+<?php if($this->mapa) :?>    
+    <script type="text/javascript">
+    function initialize() {
+    var latLng = new google.maps.LatLng(<?php echo $this->latitud;?>,<?php echo $this->longitud;?>);
+    var caracteres = <?php echo $this->latitud;?>;
+    var caracteres2 = <?php echo $this->longitud;?>;
+    var coordenada = caracteres+','+caracteres2;
+    $('#cordenadagooglemaps').val(coordenada);  
+    var map = new google.maps.Map(document.getElementById('mapCanvas'), {
+        zoom: 16,
+        center: latLng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+    var marker = new google.maps.Marker({
+        position: latLng,
+        title: 'Point A',
+        map: map,
+        draggable: true
+    });  
+    google.maps.event.addListener(marker, 'drag', function() {
+        var cordenada = marker.getPosition();
+        $('#cordenadagooglemaps').val(cordenada.lat()+','+cordenada.lng());
+    });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+    $(document).ready(function(){
+    $('#cordenadagooglemaps-element').append('<div id="mapCanvas" style="width: 780px; height: 250px"></div>');
+    });     
+    </script>
+<?php endif;?>
+<div class="well">
+    <?php echo $this->formulario_agregar;?>
+</div>
