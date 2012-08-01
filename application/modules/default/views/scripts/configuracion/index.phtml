@@ -1,0 +1,14 @@
+<?php echo $this->action('top', 'modulo', 'default'); ?>
+<ul class="breadcrumb">
+    <li><a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'tablero', 'action' => 'index'), '', true); ?>">Tablero</a> <span class="divider">/</span></li>
+    <li class="active">Configuración</li>
+</ul>
+<h2>
+    Configuración<br />
+    <small>Parametros de configuración del CMS del Sitio Web</small>
+</h2><br />
+<div class="well">
+    <div class="span3">
+        <?php echo $this->formulario;?>
+    </div>
+</div>
