@@ -16,9 +16,7 @@ class Plugin_Acceso extends Zend_Controller_Plugin_Abstract
         $action = $request->getActionName();
         /* [CUANDO NO TENGA PERMISO] */
         if(!$this->_acl->isAllowed(Zend_Registry::get('rol_acl'), $module.':'.$resource, $action)){            
-            #$request->setModuleName('default')->setControllerName('index')->setActionName('permiso');                     
-            #Zend_Registry::get('rol_acl');
-            echo 'ERROR - SIN PERMISO';
-        }      
+            $request->setModuleName('default')->setControllerName('index')->setActionName('permiso');                     
+        }     
     }
 }

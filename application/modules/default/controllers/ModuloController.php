@@ -21,6 +21,16 @@ class ModuloController extends Zend_Controller_Action
         $this->id_usuario = $registro->get('id_usuario');
         /* [ID REGISTRO] */        
         $this->id_registro = $this->_getParam('idregistro',0);
+        /* [LOGS] */      
+        $frontal = Zend_Controller_Front::getInstance()->getRequest();       
+        $datos = array(
+            'id_modulo'=>$this->id_modulo,
+            'id_empresa'=>$this->id_empresa,
+            'id_usuario'=>$this->id_usuario,
+            'id_registro'=>$this->id_registro,
+        );
+        $logs = new Default_Model_Logs($frontal,$datos);
+        $logs->generarLogs();
     }
     public function topAction(){}
 
@@ -124,7 +134,7 @@ class ModuloController extends Zend_Controller_Action
                 $datos = $formulario->getValues(); 
                 /* [NORMAR DATOS] */
                 $formulario = new Default_Model_Formulario();
-                $data = $formulario->normaralizacion($this->id_modulo, $datos,false);     
+                $data = $formulario->normaralizacion($this->id_modulo, $datos);     
                 $modulo = new Default_Model_DbTable_Modulo();
                 $mensaje = new Zend_Session_Namespace('mensaje');                
                 if($modulo->editardatos($data,$this->id_registro,$this->id_empresa,$this->id_modulo)){

@@ -12,7 +12,18 @@ class UsuarioController extends Zend_Controller_Action
         $this->id_empresa = $this->sesion->id_empresa;
         /* [ID USUARIO] */
         $registro = new Zend_Registry();
-        $this->id_usuario = $registro->get('id_usuario');        
+        $this->id_usuario = $registro->get('id_usuario');           
+        /* [ID REGISTRO] */        
+        $this->id_registro = $this->_getParam('id',0);              
+        /* [LOGS] */      
+        $frontal = Zend_Controller_Front::getInstance()->getRequest();       
+        $datos = array(
+            'id_empresa'=>$this->id_empresa,
+            'id_usuario'=>$this->id_usuario,
+            'id_registro'=>$this->id_registro,
+        );
+        $logs = new Default_Model_Logs($frontal,$datos);
+        $logs->generarLogs();          
     }
     public function indexAction()
     {

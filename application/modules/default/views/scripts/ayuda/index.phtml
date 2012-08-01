@@ -3,4 +3,19 @@
     <li><a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'tablero', 'action' => 'index'), '', true); ?>">Tablero</a> <span class="divider">/</span></li>
     <li class="active">Ayuda</li>
 </ul>
-<h2>� Ayuda ! <small>&iquest;Tienes problemas?. Contactanos y resolveremos tus dudas</small></h2><br />
+<h2>¡ Ayuda ! <small>&iquest;Tienes problemas?. Contactanos y resolveremos tus dudas</small></h2><br />
+<?php if ($this->error) : ?>
+    <div class="alert alert-error">
+        <a class="close" data-dismiss="alert" href="#">&times;</a>
+        <h2>¡ERROR!</h2> No fue posible ejecutar esta acción, intenta nuevamente.
+    </div>   
+<?php elseif ($this->exito) : ?>   
+    <div class="alert alert-success">
+        <a class="close" data-dismiss="alert" href="#">&times;</a>
+        <h2>¡EXITO!</h2> En breves momentos te contactaremos para dar solución a tus problemas.
+    </div>        
+<?php endif; ?>  
+<div class="well">
+    <h3>Escribenos y la brevedad de responderemos</h3>
+    <?php echo $this->formulario;?>
+</div>

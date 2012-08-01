@@ -174,7 +174,7 @@ class Default_Model_DbTable_Modulo extends Zend_Db_Table_Abstract
                 if(in_array($fila, $data)){
                     
                 }else return false;
-            }
+            
             exit;*/
             /* COMPRUEBO LOS CAMPOS */
             /*foreach() as $retorno){
@@ -197,8 +197,33 @@ class Default_Model_DbTable_Modulo extends Zend_Db_Table_Abstract
             $consulta = $base->select()
                     ->from($modulo->nombre_modulo_slug,'*')
                     ->where($base->quoteInto($columna.' LIKE ?','%'.$amigable.'%'));
+            
             return $consulta->query()->rowCount();
             
+    } 
+    /* [AMIGABLE EXISTENTE] */
+    public function amigablevalidacion($nombre,$id_modulo){
+        if(is_string($nombre) && is_numeric($id_modulo)){
+            /* [OBTENER ID EMPRESA] */
+            $modulo = $this->obtenerdato($id_modulo);
+            /* [BASE PERSONALIZADA] */                    
+            $base = $this->basepersonalizado($modulo->id_empresa);   
+            /* CONSULTA */
+            
+            $consulta = $base->select()
+                    ->from($modulo->nombre_modulo_slug,'*')
+                    ->where('nombre_slug = ?',$nombre);
+            if($consulta->query()->rowCount()>0){
+                return false;
+            }else{
+                return true;
+            }
+        }else return false;
+    }
+    public function amigablecoherente($nombre){
+        if(is_string($nombre)){
+            return $nombre.'-1';
+        }else return false;     
     }
     /* ELIMINAR PERMISOS DEL LOS USUARIOS */
     private function eliminar($id_usuario){        

@@ -42,7 +42,7 @@ class Default_Model_DbTable_Usuario extends Zend_Db_Table_Abstract
             $base = $this->base();
             if($base->delete('empresa_has_usuario','id_usuario = '.$id_usuario)){
                 if($base->delete('usuario','id_usuario = '.$id_usuario)){
-                    if($base->delete('logs','usuario_id_usuario = '.$id_usuario)) return true;
+                    if($base->delete('logs','usuario_logs = '.$id_usuario)) return true;
                     else return true;
                 }else return false;
             }else return false;

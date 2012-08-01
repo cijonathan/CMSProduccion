@@ -77,7 +77,7 @@ class Default_Model_Formulario
             return $atrib;
         }        
     }
-    public function normaralizacion($id_modulo,$datos,$tipo = true){
+    public function normaralizacion($id_modulo,$datos){
         if(is_numeric($id_modulo) && is_array($datos)){
             $campo = new Default_Model_DbTable_Campo();       
             /*foreach($modulo->listaranormar($id_modulo) as $retorno){                
@@ -110,10 +110,10 @@ class Default_Model_Formulario
                     }              
                 }
             }
-            return $this->creardatos($datos,$tipo);
+            return $this->creardatos($datos);
         }        
     }
-    private function creardatos($datos,$tipo){
+    private function creardatos($datos){
         if(is_array($datos)){
             /* [NUEVO ARREGLO] */
             $data = array();
@@ -124,15 +124,14 @@ class Default_Model_Formulario
                 if(array_key_exists($retorno->nombre_campo_slug, $datos)){
                     $data[$retorno->nombre_campo_slug] = $datos[$retorno->nombre_campo_slug];
                     if($retorno->nombre_campo_slug == 'nombre'){
-                        if($tipo){
-                            $data['nombre_slug'] = $this->amigable($datos['nombre'],$id_modulo);
-                        }
+                        $data['nombre_slug'] = $this->amigable($datos['nombre'],$id_modulo);
                     }
                 }
             }
             /* DOS PARAMETROS EXTRA */
             $data['id_idioma'] = $datos['id_idioma'];
-            $data['id_estado'] = $datos['id_estado'];            
+            $data['id_estado'] = $datos['id_estado'];                
+            
             return $data;
         }else return false;
     }
@@ -155,13 +154,20 @@ class Default_Model_Formulario
         );
         $nombre = strtr($nombre,$datos);
         $nombre = preg_replace('/[^A-Za-z0-9-]+/','',$nombre);   
-        
         $modulo = new Default_Model_DbTable_Modulo();
-        $existe = $modulo->existeamigable($nombre, $id_modulo);
+
+        /* PRIMER INGRESO (AGREGAR) */
+        $existe = $modulo->existeamigable($nombre,$id_modulo);
+        $nombre = $nombre.'-'.($existe+1);
         if($existe>0){
-            $nombre = $nombre.'-'.($existe+1);
+            if($modulo->amigablevalidacion($nombre,$id_modulo)){
+                return $nombre;
+            }else{                      
+                return $modulo->amigablecoherente($nombre,$id_modulo);
+            }
+        }else{
+            return $nombre;        
         }
-        return $nombre;
     }
 }
 
