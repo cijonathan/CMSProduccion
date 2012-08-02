@@ -102,6 +102,20 @@ class Default_Model_DbTable_Usuario extends Zend_Db_Table_Abstract
             }            
         }        
     }
+    public function obtener($id_usuario){
+        if(is_numeric($id_usuario)){
+            $consulta = $this->select()
+                    ->setIntegrityCheck(false)
+                    ->from($this->_name,array('nombre_usuario','email_usuario','clave_usuario'))
+                    ->where('id_usuario = ?',$id_usuario);
+            return $consulta->query()->fetch();
+        }else return false;
+    }
+    public function actualizar($datos,$id_usuario){
+        if(is_array($datos) && is_numeric($id_usuario)){            
+            if($this->update($datos,'id_usuario = '.$id_usuario)) return true; else return false;
+        }else return false;
+    }
     private function base(){
         /* [BASE DE DATOS PERSONALIZADA] */
         $config = new Zend_Config_Ini('../application/configs/application.ini', 'production');
