@@ -42,6 +42,8 @@ class Default_Model_DbTable_Componente extends Zend_Db_Table_Abstract
                 $consulta->where('id_componente = ?',1);
             }elseif($tipo == 'archivos'){
                 $consulta->where('id_componente = ?',2);                
+            }elseif($tipo == 'videos'){
+                $consulta->where('id_componente = ?',3);                
             }else{
                 return false;
             }

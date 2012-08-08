@@ -39,10 +39,13 @@
                     <ul class="dropdown-menu">
                         <li><a href="<?php echo $this->url(array('module'=>'default','controller'=>'modulo','action'=>'editar','id'=>$this->dato->id_modulo,'idregistro'=>$dato),'',true);?>"><i class="icon-pencil"></i> Editar</a></li>
                         <?php if($this->fotos) :?>
-                            <li><a href="<?php echo $this->url(array('module'=>'default','controller'=>'modulo','action'=>'galeria-fotografica','id'=>$this->dato->id_modulo,'idregistro'=>$dato),'',true);?>"><i class="icon-camera"></i> Fotografías</a></li>
+                            <li><a href="<?php echo $this->url(array('module'=>'default','controller'=>'modulo','action'=>'galeria-fotografica','id'=>$this->dato->id_modulo,'idregistro'=>$dato),'',true);?>"><i class="icon-picture"></i> Fotografías</a></li>
                         <?php endif;?>
                         <?php if($this->archivos) :?>
                             <li><a href="<?php echo $this->url(array('module'=>'default','controller'=>'modulo','action'=>'archivos','id'=>$this->dato->id_modulo,'idregistro'=>$dato),'',true);?>"><i class="icon-file"></i> Archivos</a></li>
+                        <?php endif;?>
+                        <?php if($this->videos) :?>
+                            <li><a href="<?php echo $this->url(array('module'=>'default','controller'=>'modulo','action'=>'videos','id'=>$this->dato->id_modulo,'idregistro'=>$dato),'',true);?>"><i class="icon-camera"></i> Vídeos</a></li>
                         <?php endif;?>
                         <?php if($this->relaciones) :?>
                             <li><a href="<?php echo $this->url(array('module'=>'default','controller'=>'modulo','action'=>'relaciones','id'=>$this->dato->id_modulo,'idregistro'=>$dato),'',true);?>"><i class="icon-refresh"></i> Relaciones</a></li>

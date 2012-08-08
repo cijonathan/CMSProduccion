@@ -558,9 +558,14 @@ class Default_Model_DbTable_Modulo extends Zend_Db_Table_Abstract
             /* [BASE PERSONALIZADA] */
             $base = $this->basepersonalizado($id_empresa);
             
+
 			# Modulo hijo
             $modulo = $this->obtenerdato($id_hijo);
             $tabla = $modulo->nombre_modulo_slug;
+            
+            $consulta = $base->select()
+                    ->from($tabla);
+            
 			
 			# Modulo Padre
 			$modulo_padre = $this->obtenerdato($id_padre);
@@ -570,12 +575,12 @@ class Default_Model_DbTable_Modulo extends Zend_Db_Table_Abstract
 		
 			# Guardar en BD
 			if($cardinalidad == 2){
-				$base->delete($tabla_rel,array('id_'.$modulo_padre->nombre_modulo_slug => $id_padre));
+				$base->delete('`'.$tabla_rel.'`',array('`id_'.$modulo_padre->nombre_modulo_slug.'`' => $id_padre));
 				foreach($datos[$tabla] as $dato){
-					$base->insert($tabla_rel,array('id_'.$modulo_padre->nombre_modulo_slug => $id_padre, 'id_'.$tabla => $dato));
+					$base->insert('`'.$tabla_rel.'`',array('`id_'.$modulo_padre->nombre_modulo_slug.'`' => $id_padre, 'id_'.$tabla => $dato));
 				}
-			}else{
-				$base->update($tabla,array("id_".$modulo_padre->nombre_modulo_slug => $id_registro), "`id_".$tabla."` = ".$datos['productos']);
+			}else{                                  
+                            $base->update($tabla,array('id_'.$modulo_padre->nombre_modulo_slug=>$id_registro),'id_'.$tabla.'='.$datos[$tabla]);                                                     
 			}
 			return true;
         }

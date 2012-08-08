@@ -12,6 +12,7 @@ class Model_Acl  extends Zend_Acl
         # [RECURSOS]          
         $this->add(new Zend_Acl_Resource('default'));
         $this->add(new Zend_Acl_Resource('default:index'));
+        $this->add(new Zend_Acl_Resource('default:feed'));
         $this->add(new Zend_Acl_Resource('default:error'));        
         $this->add(new Zend_Acl_Resource('default:modulo'));        
         $this->add(new Zend_Acl_Resource('default:perfil'));        
@@ -22,7 +23,7 @@ class Model_Acl  extends Zend_Acl
       
         # [PERMISOS]
         $this->deny('visitante');
-        $this->allow('visitante',array('default:index','default:error'));        
+        $this->allow('visitante',array('default:index','default:error','default:feed'));        
         $this->deny('basico',array('default:usuario'));
         $this->allow('basico',array('default:tablero','default:modulo','default:perfil','default:ayuda'));
         $this->allow('administrador',array('default:usuario','default:configuracion'));        

@@ -50,12 +50,13 @@ class ModuloController extends Zend_Controller_Action
         $modulo = new Default_Model_DbTable_Modulo();
         $this->view->total = $modulo->totaldatos($this->id_modulo,$this->id_empresa);
         /* [UN DATO] */
-        $this->view->modulo = $modulo;
+        $this->view->modulo = $modulo;        
         
         /* [COMPONENTES] */
         $componente = new Default_Model_DbTable_Componente();
         $this->view->fotos = $componente->existeComponente($this->id_modulo,'fotos');
         $this->view->archivos = $componente->existeComponente($this->id_modulo,'archivos');
+        $this->view->videos = $componente->existeComponente($this->id_modulo,'videos');
         /* [RELACIONES] */
         $relacion = new Default_Model_DbTable_Relacion();
         $this->view->relaciones = $relacion->existeRelacion($this->id_modulo);

@@ -69,6 +69,14 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
                 ->appendFile('/js/jquery.validate.js') 
                 ->appendFile('/js/jquery.ci.js'); 
         return $vista;
-    }   
+    }  
+    protected function _initSiteRoutes(){
+        $this->bootstrap("frontController");
+        $front = $this->getResource("frontController");
+        $router = new Zend_Controller_Router_Rewrite();
+        $routes = new Zend_Config_Ini(APPLICATION_PATH . "/configs/rutas.ini");
+        $router->addConfig($routes, 'routes');
+        $front->getRouter()->addConfig($routes, "routes");
+    }        
 }
 
